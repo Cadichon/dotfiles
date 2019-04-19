@@ -1,7 +1,13 @@
 export CLICOLOR=1
+export GPG_TTY=$(tty)
 export EDITOR=emacs
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/platform-tools/
+
+if type most &> /dev/null
+then
+    export PAGER=most
+fi
 
 if [ -f "/usr/local/etc/profile.d/bash_completion.sh" ]
 then
@@ -35,10 +41,9 @@ prompt()
     PS1+=" \u $(__git_ps1 ${RED}\(%s\)${RESET}:)${BLUE}\w${RESET} \$ "
 }
 
-alias xampp="ssh -i ~/.bitnami/stackman/machines/xampp/ssh/id_rsa -o StrictHostKeyChecking=no root@192.168.64.2"
-alias man="man -P most"
 alias bat="bat --pager never"
 alias ls="ls -p"
+alias ne="emacs"
 #alias ls="ls --color=auto"
 alias la="ls -lah"
 

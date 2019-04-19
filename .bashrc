@@ -1,7 +1,5 @@
 export CLICOLOR=1
 export EDITOR=emacs
-export PATH=${PATH}:$HOME/.emacs.d/bin
-export PATH=${PATH}:$HOME/.dub/packages/.bin/dls-latest/
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/platform-tools/
 

@@ -3,10 +3,19 @@ export GPG_TTY=$(tty)
 export EDITOR=emacs
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/platform-tools/
+export PATH=${PATH}:$HOME/bin
 
 if type most &> /dev/null
 then
     export PAGER=most
+fi
+
+if ! type __git_ps1 &> /dev/null
+then
+    function __git_ps1
+    {
+        echo -n
+    }
 fi
 
 if [ -f "/usr/local/etc/profile.d/bash_completion.sh" ]

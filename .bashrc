@@ -50,9 +50,14 @@ prompt()
     PS1+=" \u $(__git_ps1 ${RED}\(%s\)${RESET}:)${BLUE}\w${RESET} \$ "
 }
 
+if type docker &> /dev/null
+then
+    alias debian="docker run --rm -it -v $(pwd):/app debian bash"
+fi
+
 alias bat="bat --pager never"
 alias ls="ls -p"
 alias ne="emacs"
 #alias ls="ls --color=auto"
 alias la="ls -lah"
-
+alias mr_clean="find . -name '*~' -delete"

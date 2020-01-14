@@ -43,8 +43,8 @@ prompt()
     BLUE="\[$(tput setaf 4)\]"
     GREEN="\[$(tput setaf 2)\]"
     RESET="\[$(tput sgr0)\]"
-    CHECK=$'\[\xE2\x9C\x94\]'
-    CROSS=$'\[\xE2\x9C\x98\]'
+    CHECK=$'\xE2\x9C\x94'
+    CROSS=$'\xE2\x9C\x98'
     if [ $EXIT -eq 0 ]
     then
         EXIT_SYMBOL="$GREEN$CHECK$RESET"
